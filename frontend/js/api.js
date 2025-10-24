@@ -1,4 +1,4 @@
-const API_BASE = "https://footprintlogger-backend.onrender.com/api";
+const API_BASE = "https://footprintlogger.onrender.com/api";
 
 async function apiRequest(endpoint, method = "GET", body = null, auth = true) {
   const headers = {
