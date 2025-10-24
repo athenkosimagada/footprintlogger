@@ -1,0 +1,39 @@
+{
+  "name": "footprintlogger-backend",
+  "version": "1.0.0",
+  "description": "A backend service for logging and managing user footprints.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "mongoose",
+    "jwt",
+    "bcrypt",
+    "cors",
+    "dotenv",
+    "express-validator"
+  ],
+  "author": {
+    "name": "Athenkos Imagada",
+    "email": "magadaathenkosi@gmail.com",
+    "github": "https://github.com/athenkosimagada"
+  },
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.19.0",
+    "mongoose": "^8.18.0",
+    "socket.io": "^4.8.1"
+  }
+}

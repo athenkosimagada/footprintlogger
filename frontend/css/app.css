@@ -1,0 +1,784 @@
+/**
+ * CSS Variables
+ * This file defines the CSS variables used throughout the application.
+ * It includes font families, sizes, weights, colors, and other design tokens.
+ */
+:root {
+  /* Font Families */
+  --font-family-base: "system-ui", sans-serif;
+  --font-family-heading: "Poppins", sans-serif;
+  --font-family-mono: "Courier New", monospace;
+
+  /* Font Sizes */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-xs: 0.75rem; /* 12px */
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-bolder: 900;
+
+  /* Base Colors */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+
+  --clr-grey-100: hsl(0, 0%, 98%);
+  --clr-grey-200: hsl(0, 0%, 95%);
+  --clr-grey-300: hsl(0, 0%, 90%);
+  --clr-grey-400: hsl(0, 0%, 80%);
+  --clr-grey-500: hsl(0, 0%, 70%);
+  --clr-grey-600: hsl(0, 0%, 60%);
+  --clr-grey-700: hsl(0, 0%, 50%);
+  --clr-grey-800: hsl(0, 0%, 40%);
+  --clr-grey-900: hsl(0, 0%, 30%);
+
+  --clr-dark-100: hsl(0, 0%, 10%);
+  --clr-dark-200: hsl(0, 0%, 15%);
+  --clr-dark-300: hsl(0, 0%, 20%);
+  --clr-dark-400: hsl(0, 0%, 25%);
+  --clr-dark-500: hsl(0, 0%, 35%);
+  --clr-dark-600: hsl(0, 0%, 45%);
+  --clr-dark-700: hsl(0, 0%, 55%);
+  --clr-dark-800: hsl(0, 0%, 70%);
+  --clr-dark-900: hsl(0, 0%, 85%);
+
+  --clr-green-100: hsl(145, 60%, 95%);
+  --clr-green-200: hsl(145, 60%, 85%);
+  --clr-green-300: hsl(145, 60%, 75%);
+  --clr-green-400: hsl(145, 60%, 65%);
+  --clr-green-500: hsl(145, 60%, 55%);
+  --clr-green-600: hsl(145, 60%, 45%);
+  --clr-green-700: hsl(145, 60%, 35%);
+  --clr-green-800: hsl(145, 60%, 25%);
+  --clr-green-900: hsl(145, 60%, 15%);
+
+  --clr-red-100: hsl(0, 100%, 95%);
+  --clr-red-200: hsl(0, 100%, 85%);
+  --clr-red-300: hsl(0, 100%, 75%);
+  --clr-red-400: hsl(0, 100%, 65%);
+  --clr-red-500: hsl(0, 100%, 55%);
+  --clr-red-600: hsl(0, 100%, 45%);
+  --clr-red-700: hsl(0, 100%, 35%);
+  --clr-red-800: hsl(0, 100%, 25%);
+  --clr-red-900: hsl(0, 100%, 15%);
+
+  --clr-yellow-100: hsl(50, 100%, 95%);
+  --clr-yellow-200: hsl(50, 100%, 85%);
+  --clr-yellow-300: hsl(50, 100%, 75%);
+  --clr-yellow-400: hsl(50, 100%, 65%);
+  --clr-yellow-500: hsl(50, 100%, 55%);
+  --clr-yellow-600: hsl(50, 100%, 45%);
+  --clr-yellow-700: hsl(50, 100%, 35%);
+  --clr-yellow-800: hsl(50, 100%, 25%);
+  --clr-yellow-900: hsl(50, 100%, 15%);
+
+  --clr-orange-100: hsl(30, 100%, 95%);
+  --clr-orange-200: hsl(30, 100%, 85%);
+  --clr-orange-300: hsl(30, 100%, 75%);
+  --clr-orange-400: hsl(30, 100%, 65%);
+  --clr-orange-500: hsl(30, 100%, 55%);
+  --clr-orange-600: hsl(30, 100%, 45%);
+  --clr-orange-700: hsl(30, 100%, 35%);
+  --clr-orange-800: hsl(30, 100%, 25%);
+  --clr-orange-900: hsl(30, 100%, 15%);
+
+  --clr-blue-100: hsl(210, 100%, 95%);
+  --clr-blue-200: hsl(210, 100%, 85%);
+  --clr-blue-300: hsl(210, 100%, 75%);
+  --clr-blue-400: hsl(210, 100%, 65%);
+  --clr-blue-500: hsl(210, 100%, 55%);
+  --clr-blue-600: hsl(210, 100%, 45%);
+  --clr-blue-700: hsl(210, 100%, 35%);
+  --clr-blue-800: hsl(210, 100%, 25%);
+  --clr-blue-900: hsl(210, 100%, 15%);
+
+  /* Light Theme Colors */
+  --clr-primary: var(--clr-green-500);
+  --clr-secondary: var(--clr-grey-500);
+  --clr-accent: var(--clr-green-600);
+  --clr-error: var(--clr-red-500);
+  --clr-success: var(--clr-green-500);
+  --clr-warning: var(--clr-yellow-500);
+  --clr-info: var(--clr-orange-500);
+  --clr-link: var(--clr-green-500);
+
+  --clr-body-bg: var(--clr-grey-100);
+
+  --clr-text: var(--clr-dark-300);
+  --clr-heading: var(--clr-dark-300);
+
+  --clr-btn-primary-bg: var(--clr-green-500);
+  --clr-btn-primary-text: var(--clr-white);
+  --clr-btn-primary-hover-bg: var(--clr-green-600);
+
+  --clr-btn-toggle-bg: transparent;
+  --clr-btn-toggle-text: var(--clr-black);
+  --clr-btn-toggle-border: var(--clr-dark-600);
+
+  --clr-input-bg: var(--clr-white);
+  --clr-input-border: var(--clr-grey-300);
+  --clr-input-focus-border: var(--clr-dark-500);
+  --clr-input-placeholder: var(--clr-grey-500);
+  --clr-input-text: var(--clr-dark-300);
+  --clr-input-label: var(--clr-dark-300);
+  --clr-input-disabled-bg: var(--clr-grey-200);
+  --clr-input-disabled-text: var(--clr-grey-500);
+  --clr-input-disabled-border: var(--clr-grey-300);
+
+  --clr-table-header-bg: var(--clr-dark-100);
+  --clr-table-header-text: var(--clr-white);
+  --clr-table-row-bg: var(--clr-grey-300);
+  --clr-table-row-text: var(--clr-dark-300);
+
+  --clr-pagination-btn-bg: var(--clr-grey-300);
+  --clr-pagination-btn-text: var(--clr-black);
+
+  --clr-help-bg: var(--clr-green-200);
+  --clr-help-text: var(--clr-dark-300);
+
+  --clr-footer-link: var(--clr-white);
+  --clr-footer-bg: var(--clr-dark-100);
+  --clr-footer-text: var(--clr-white);
+}
+
+/**
+ * Global CSS Styles
+ * This section contains the global styles for the application.
+ */
+
+body {
+  position: relative;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  background-color: var(--clr-body-bg);
+  color: var(--clr-text);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--clr-heading);
+  line-height: 1.1;
+}
+
+p {
+  color: var(--clr-text);
+}
+
+a {
+  color: var(--clr-link);
+  text-decoration: underline;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+button {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-semibold);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.required {
+  color: var(--clr-error);
+}
+
+.btn-primary {
+  background-color: var(--clr-btn-primary-bg);
+  color: var(--clr-btn-primary-text);
+
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--clr-btn-primary-hover-bg);
+}
+
+.btn-toggle {
+  background-color: var(--clr-btn-toggle-bg);
+  color: var(--clr-btn-toggle-text);
+  border: 1px solid var(--clr-btn-toggle-border);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  padding: 0.5rem;
+  border: 1px solid var(--clr-input-border);
+  border-radius: 0.25rem;
+  background-color: transparent;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--clr-input-focus-border);
+  box-shadow: 0 0 0 2px rgba(0, 128, 255, 0.2);
+  color: var(--clr-input-text);
+  outline: none;
+}
+
+.form-input::placeholder,
+.form-select::placeholder,
+.form-textarea::placeholder {
+  color: var(--clr-input-placeholder);
+}
+
+.form-input:disabled,
+.form-select:disabled,
+.form-textarea:disabled {
+  background-color: var(--clr-input-disabled-bg);
+  color: var(--clr-input-disabled-text);
+  border-color: var(--clr-input-disabled-border);
+}
+
+.form-select option {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--clr-input-bg);
+  color: var(--clr-input-text);
+  cursor: pointer;
+}
+
+/**
+ * Layout Styles
+ * This section contains the layout styles for the application.
+ */
+
+.page {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  max-width: 300px;
+  min-width: 250px;
+  padding: 1rem;
+  background-color: var(--clr-white);
+}
+
+.sidebar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: var(--font-weight-bold);
+  padding-top: 1rem;
+}
+
+.sidebar__logo-text {
+  width: 100%;
+  max-width: 140px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+.sidebar__logo-text {
+  line-height: 0.9;
+}
+
+.sidebar__logo-text span:last-child {
+  color: var(--clr-green-600);
+  align-self: flex-end;
+}
+
+.sidebar__menu {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.sidebar__menu-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 0.25rem;
+}
+
+.sidebar__menu-item {
+  list-style: none;
+  min-height: 40px;
+  cursor: pointer;
+}
+
+.sidebar__menu-item a.active,
+.sidebar__menu-item a:hover {
+  background-color: var(--clr-primary);
+  border-radius: 0.5rem;
+}
+
+.sidebar__menu-item a {
+  text-decoration: none;
+  color: var(--clr-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.sidebar__menu-item a:hover {
+  color: var(--clr-text);
+}
+
+.sidebar__menu-item .btn-logout {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--clr-text);
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.sidebar__menu-toggle {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar__menu-toggle svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--clr-text);
+  transition: fill 0.3s ease;
+}
+
+.sidebar__menu-toggle:hover svg {
+  fill: var(--clr-link);
+}
+
+/**
+ * Content Styles
+ * This section contains styles for the main content area.
+ */
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  background-color: var(--clr-body-bg);
+}
+
+.content__header {
+  margin: 0 auto;
+  max-width: 1024px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content__header h4 {
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--clr-heading);
+}
+
+.content__header--streak {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.content__header--streak .btn-streak {
+  background: none;
+  border: none;
+  color: var(--clr-text);
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.content__body {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+/**
+ * Login Styles
+ * This section contains styles for the login page.
+ */
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--clr-body-bg);
+}
+
+.login__box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  max-width: 400px;
+  margin: auto;
+  padding: 2rem;
+  background-color: var(--clr-white);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login__title {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--clr-heading);
+}
+
+.login__description {
+  color: var(--clr-text);
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login__error {
+  color: var(--clr-error);
+  font-size: 0.875rem;
+}
+
+/**
+ * Register Styles
+ * This section contains styles for the register page.
+ */
+
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--clr-body-bg);
+}
+
+.register__box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  max-width: 400px;
+  margin: auto;
+  padding: 2rem;
+  background-color: var(--clr-white);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.register__title {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--clr-heading);
+}
+
+.register__description {
+  color: var(--clr-text);
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.register__error {
+  color: var(--clr-error);
+  font-size: 0.875rem;
+}
+
+/**
+ * Log Activities Styles
+ * This section contains styles for the log activities page.
+ */
+
+.activities {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.activities__controls-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.activities__filter label {
+  margin-right: 0.5rem;
+}
+
+.activities__list.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.activities__list th,
+.activities__list td {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.activities__list tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/**
+ * Log Activity Styles
+ * This section contains styles for the log activity page.
+ */
+
+.log-activity {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding-top: 2rem;
+}
+
+.log-activity__box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.log-activity__title {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--clr-heading);
+}
+
+.log-activity__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.log-activity__error {
+  color: var(--clr-error);
+  font-size: 0.875rem;
+}
+
+.log-activity__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/**
+ * Stats Styles
+ * This section contains styles for the stats page.
+ */
+
+.stats {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.stats__item {
+  background-color: var(--clr-white);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.stats__item.highlight {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.stats__item span {
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--clr-heading);
+}
+
+.stats__item--title {
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--clr-heading);
+}
+
+/**
+ * Tip Styles
+ * This section contains styles for the tip page.
+ */
+
+.tip {
+  margin-top: 2rem;
+  background-color: var(--clr-white);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+/**
+ * Graph Styles
+ * This section contains styles for the graph page.
+ */
+
+.graph {
+  margin-top: 2rem;
+  background-color: var(--clr-white);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+/**
+ * Leaderboard Styles
+ * This section contains styles for the leaderboard page.
+ */
+
+.leaderboard {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.leaderboard th,
+.leaderboard td {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.leaderboard .current-user {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+}
+
+/**
+ * Weekly Goal Styles
+ * This section contains styles for the weekly goal page.
+ */
+
+.weekly-goal {
+  background-color: var(--clr-white);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.weekly-goal h5 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--clr-heading);
+  margin: 0;
+}
+
+.weekly-goal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.weekly-goal__progress {
+  width: 100%;
+  background: var(--clr-progress-bar-bg, #f1f1f1);
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.weekly-goal__progress-fill {
+  height: 100%;
+  border-radius: 5px;
+  background: var(--clr-progress-bar-fill, #007bff);
+  width: 0%;
+}
+
+.weekly-goal__progress--hidden,
+.weekly-goal__form--hidden {
+  display: none;
+}
+
+#current-weekly-goal {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--clr-text);
+}
+
+#weekly-goal-message {
+  display: none;
+  margin-top: 0.5rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--clr-success);
+  min-height: 1.2rem;
+}
+
+#weekly-goal-error {
+  display: none;
+  margin-top: 0.5rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--clr-error);
+  min-height: 1.2rem;
+}
