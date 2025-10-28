@@ -1,5 +1,3 @@
-const API_BASE = "https://footprintlogger.onrender.com/api";
-
 async function apiRequest(endpoint, method = "GET", body = null, auth = true) {
   const headers = {
     "Content-Type": "application/json",
@@ -10,7 +8,7 @@ async function apiRequest(endpoint, method = "GET", body = null, auth = true) {
     if (token) headers["Authorization"] = `Bearer ${token}`;
   }
 
-  const response = await fetch(`${API_BASE}${endpoint}`, {
+  const response = await fetch(`/api${endpoint}`, {
     method,
     headers,
     body: body ? JSON.stringify(body) : null,

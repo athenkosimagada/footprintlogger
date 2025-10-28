@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 import http from "http";
 import { Server } from "socket.io";
+import path from "path";
+import { fileURLToPath } from "url";
 
 import { connectDB } from "./models/db.js";
 import { port } from "./config/index.js";
@@ -10,6 +12,9 @@ import authRoutes from "./routes/authRoutes.js";
 import logRoutes from "./routes/logRoutes.js";
 import statsRoutes from "./routes/statsRoutes.js";
 import insightsRoutes from "./routes/insightsRoutes.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const server = http.createServer(app);
@@ -32,6 +37,8 @@ app.set("io", io);
 app.use(cors());
 app.use(express.json());
 
+app.use(express.static(path.join(__dirname, "..", "public")));
+
 app.use((err, req, res, next) => {
   if (err instanceof SyntaxError && err.status === 400 && "body" in err) {
     console.error("Malformed JSON:", err.body);
@@ -44,6 +51,10 @@ app.use("/api/auth", authRoutes);
 app.use("/api/logs", logRoutes);
 app.use("/api/stats", statsRoutes);
 app.use("/api/insights", insightsRoutes);
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
 app.use((err, req, res, next) => {
   console.error(err);
